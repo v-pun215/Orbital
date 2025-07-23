@@ -27,26 +27,167 @@
     <div class="banner">
         <h2>Explore the Stars</h2>
         <h1>Your Gateway to Commercial </br>Space Travel</h1>
-        <a href="explore.html" class="button">Explore Now</a>
+        <div id="btn-wrapper"><a href="explore.html" class="button">Explore now</a></div>
     </div>
-    <div class="about-mission">
-        <h2>Our Mission</h2>
-        <p>To make space travel accessible to everyone, providing unforgettable experiences beyond Earth.</p>
+    <div class="popular-missions">
+        <div class="popular-content">
+            <h2>Popular Missions</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="mars.jpg" alt="Image">
+                    <div class="overlay">
+                        <p class="name-title">Mars</p>
+                        <p class="location-title">A 6 month journey to the red rock.</p>
+                        <div class="bottom-row">
+                            <a href="#" class="button1">Learn more</a>
+                            <div class="stars">
+                                ★ 4.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="iss.jpg" alt="Image">
+                    <div class="overlay">
+                        <p class="name-title">Orbital Station</p>
+                        <p class="location-title">A 1 month stay on the Earth Station.</p>
+                        <div class="bottom-row">
+                            <a href="#" class="button1">Learn more</a>
+                            <div class="stars">
+                                ★ 4.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="venus.jpg" alt="Image">
+                    <div class="overlay">
+                        <p class="name-title">Venus Orbit</p>
+                        <p class="location-title">A 4 month journey to the second planet.</p>
+                        <div class="bottom-row">
+                            <a href="#" class="button1">Learn more</a>
+                            <div class="stars">
+                                ★ 4.9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="neptune.jpg" alt="Image">
+                    <div class="overlay">
+                        <p class="name-title">Neptune</p>
+                        <p class="location-title">A 14 month voyage to the blue giant.</p>
+                        <div class="bottom-row">
+                            <a href="#" class="button1">Learn more</a>
+                            <div class="stars">
+                                ★ 4.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const token = localStorage.getItem("token");
-    const user = JSON.parse(localStorage.getItem("user"));
+    <div class="how-it-works">
+        <div class="how-content">
+            <h2>How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="top">
+                        <p class="emoji-title">🚀</p>
+                        <p class="numeration">1</p>
+                    </div>
+                    <p class="sub">Choose your destination</p>
+                </div>
+                <div class="step">
+                    <div class="top">
+                        <p class="emoji-title">🎟️</p>
+                        <p class="numeration">2</p>
+                    </div>
+                    <p class="sub">Book your flight</p>
+                </div>
+                <div class="step">
+                    <div class="top">
+                        <p class="emoji-title">🧳</p>
+                        <p class="numeration">3</p>
+                    </div>
+                    <p class="sub">Prepare for launch</p>
+                </div>
+                <div class="step">
+                    <div class="top">
+                        <p class="emoji-title">🛰️</p>
+                        <p class="numeration">4</p>
+                    </div>
+                    <p class="sub">Experience space travel</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="craft-options">
+        <div class="craft-content">
+            <h2>Choose your spacecraft</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="orion.png" alt="Image">
+                    <div class="overlay">
+                        <p class="name-title">Orion Pod</p>
+                        <p class="location-title">Perfect for a solo journey.</p>
+                        <div class="bottom-row">
+                            <a href="#" class="button1">Check out</a>
+                            <div class="stars">
+                                $2999+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="dome.png" alt="Image">
+                    <div class="overlay">
+                        <p class="name-title">Horizon Dome</p>
+                        <p class="location-title">A luxurious ship fit for a group journey.</p>
+                        <div class="bottom-row">
+                            <a href="#" class="button1">Check out</a>
+                            <div class="stars">
+                                $15799+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="explorer.png" alt="Image">
+                    <div class="overlay">
+                        <p class="name-title">Explorer Shuttle</p>
+                        <p class="location-title">Best for group travellers looking for more than just a comfort trip.</p>
+                        <div class="bottom-row">
+                            <a href="#" class="button1">Check out</a>
+                            <div class="stars">
+                                $50,000+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="partners">
+        <div class="partners-content">
+            <h2>Our Partners</h2>
+            <div class="partner-logos">
+                <img src="spacex.png" alt="Partner 1">
+                <img src="blue.svg" alt="Partner 2">
+                <img src="nasa.png" alt="Partner 3">
+                <img src="eu.svg" alt="Partner 4">
+            </div>
+        </div>
+    </div>
+    <div class="explore-header">
+        <div class="explore-content">
+            <h2>Explore the Universe</h2>
+            <p>Discover the wonders of space travel and find your next adventure.</p>
+            <a href="explore.html" class="button">Book now</a>
+        </div>
+    </div>
 
-    if (token && user) {
-      console.log("User:", user);
-      console.log("Token:", token);
-    } else {
-      console.log("User not logged in.");
-    }
-  });
-</script>
-<script src="profile.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -17,16 +17,22 @@ html {
     top: 0;
     width: 100%;
     color: white;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
 
+}
+
+.nav.scrolled {
+	background-color: black;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 .transparent {
     background-color: transparent;
 }
 .translucent {
     background-color: rgba(0, 0, 0, 0.476);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 .nav .container {
@@ -101,12 +107,44 @@ html {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.03);
 }
+@keyframes fadeInBlur {
+	from {
+		opacity: 0;
+		filter: blur(10px);
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateY(0);
+	}
+}
+
+@keyframes popInFromTop {
+	from {
+		opacity: 0;
+		transform: translateY(-50px);
+		filter: blur(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+		filter: blur(0);
+	}
+}
+
+.nav {
+	animation: popInFromTop 0.7s ease-out forwards;
+	opacity: 0; /* ensures it's hidden until animated */
+}
+
+
 
 .banner {
-    background-image: url(banner.jpg);
+    background-image: url(chat2.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size:cover;
     height: 100%;
     
     display: flex;
@@ -123,6 +161,8 @@ html {
 .banner h2 {
     margin: 0; 
     padding: 0.5em 0;
+    animation: fadeInBlur 0.7s ease-out forwards;
+    opacity:0;
 }
 
 .banner h2 {
@@ -154,6 +194,10 @@ html {
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         text-decoration: none;
+}
+#btn-wrapper {
+    animation: fadeInBlur 0.7s ease-out forwards;
+    opacity:0;
 }
 
 .button:hover {
@@ -211,19 +255,25 @@ html {
     width:80%;
 }
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    flex-wrap: nowrap;
 }
 .card {
     position: relative; /* make it a container for absolute children */
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     transition: transform 0.2s ease;
     width: 40vh;
     height: 45vh;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card img {
@@ -282,6 +332,7 @@ html {
 }
 
 .stars {
+    font-family:'DM Sans', sans-serif;
     color: gold;
     font-size: 1.15rem;
     letter-spacing: 2px;
@@ -508,65 +559,149 @@ html {
 .contact-textarea:focus {
 	background: rgba(255, 255, 255, 0.15);
 }
-.about-mission {
-	background: radial-gradient(ellipse at center, #111 0%, #000 100%);
-	color: #e5e5ff;
-	padding: 80px 20px;
-	text-align: center;
-	font-family: 'DM Sans', sans-serif;
-	position: relative;
-	overflow: hidden;
+.popular-missions {
+    display:flex;
+    background: #050505;
+    background: linear-gradient(90deg,rgba(5, 5, 5, 1) 0%, rgba(7, 7, 9, 1) 50%, rgba(4, 4, 4, 1) 100%);
+    justify-content:center;
+}
+.popular-content {
+    padding: 20px;
+    width:80%;
+    color:white;
+}
+.popular-content h2 {
+    font-size: 2.2rem;
 }
 
-.about-mission h2 {
-	font-size: 3rem;
-	margin-bottom: 20px;
-	font-weight: 600;
-	color: #ffffff;
-	letter-spacing: 1.2px;
+.how-it-works {
+    display:flex;
+    background: #050505;
+    background: linear-gradient(90deg,rgba(5, 5, 5, 1) 0%, rgba(7, 7, 9, 1) 50%, rgba(4, 4, 4, 1) 100%);
+    justify-content:center;
+}
+.how-content {
+    padding: 20px;
+    width:80%;
+    color:white;
+}
+.how-content h2 {
+    font-size: 2.2rem;
+    text-align:right;
+}
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.step {
+    background-color:#14141a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40vh;
+    height: 10vh;
 }
 
-.about-mission p {
-	font-size: 1.2rem;
-	line-height: 1.8;
-	max-width: 800px;
-	margin: 0 auto;
-	color: #ccccff;
+.numeration {
+    text-align:right;
+    color: white;
+    padding:0;
+    margin-top:0px;
+    font-size:1.5rem;
+    color: #adadad;
+
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom:-20px;
+}
+.emoji-title {
+    margin-top:-10px;
+    font-size:1.2rem;
 }
 
-/* Glowing ring at the bottom center */
-.about-mission::after {
-	content: "";
-	position: absolute;
-	bottom: -120px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 600px;
-	height: 600px;
-	background: radial-gradient(circle, rgba(120, 180, 255, 0.4) 0%, transparent 70%);
-	border-radius: 50%;
-	filter: blur(90px);
-	animation: pulse 4s ease-in-out infinite;
-	pointer-events: none;
-	z-index: 0;
+.sub {
+    font-size: 1.2rem;
+    color: white;
+    bottom:0;
 }
 
-@keyframes pulse {
-	0% {
-		transform: translateX(-50%) scale(1);
-		opacity: 0.6;
-	}
-	50% {
-		transform: translateX(-50%) scale(1.1);
-		opacity: 1;
-	}
-	100% {
-		transform: translateX(-50%) scale(1);
-		opacity: 0.6;
-	}
+.craft-options {
+    display:flex;
+    background: #050505;
+    background: linear-gradient(90deg,rgba(5, 5, 5, 1) 0%, rgba(7, 7, 9, 1) 50%, rgba(4, 4, 4, 1) 100%);
+    justify-content:center;
 }
-
-.about-mission * {
-	position: relative;
-	z-index: 1;
+.craft-content {
+    padding: 20px;
+    width:80%;
+    color:white;
+}
+.craft-content h2 {
+    font-size: 2.2rem;
+    text-align:left;
+}
+.partners {
+    display:flex;
+    background: #050505;
+    background: linear-gradient(90deg,rgba(5, 5, 5, 1) 0%, rgba(7, 7, 9, 1) 50%, rgba(4, 4, 4, 1) 100%);
+    justify-content:center;
+}
+.partners-content {
+    padding: 20px;
+    width:80%;
+    color:white;
+}
+.partners-content h2 {
+    font-size: 2.2rem;
+    text-align:right;
+}
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    flex-wrap: wrap;
+}
+.partner-logos img {
+    width: 20vh;
+    object-fit: contain;
+}
+.explore-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    background: linear-gradient(90deg,rgba(5, 5, 5, 1) 0%, rgba(7, 7, 9, 1) 50%, rgba(4, 4, 4, 1) 100%);
+    color:white;
+    gap:10px;
+}
+.explore-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+.explore-header p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.explore-header .button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 10px 24px;
+    font-size: 2vh;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top:10vh;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
