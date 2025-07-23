@@ -1,0 +1,74 @@
+[
+	{
+		"img": "images/missions/mars.jpg",
+		"name": "Mars",
+		"desc": "A 6 month journey to the red rock.",
+		"rating": 4.7
+	},
+	{
+		"img": "images/missions/iss.jpg",
+		"name": "Orbital Station",
+		"desc": "A 1 month stay on the Earth Station.",
+		"rating": 4.2
+	},
+	{
+		"img": "images/missions/venus.jpg",
+		"name": "Venus Orbit",
+		"desc": "A 4 month journey to the second planet.",
+		"rating": 4.9
+	},
+	{
+		"img": "images/missions/neptune.jpg",
+		"name": "Neptune",
+		"desc": "A 14 month voyage to the blue giant.",
+		"rating": 4.1
+	},
+	{
+		"img": "images/missions/moon.jpg",
+		"name": "Lunar Odyssey",
+		"desc": "A 5-day round trip to the Moon's surface. Walk in low gravity and witness Earthrise.",
+		"rating": 4.8
+	},
+    {
+        "img": "images/missions/europa.png",
+        "name": "Europa Dive",
+        "desc": "Descend beneath the icy crust of Jupiter's moon to search for alien oceans.",
+        "rating": 4.8
+    },
+	{
+		"img": "images/missions/rings.jpg",
+		"name": "Saturn Rings Tour",
+		"desc": "A luxury cruiser flyby of Saturn and its rings. Includes zero-G sky lounge.",
+		"rating": 4.9
+	},
+	{
+		"img": "images/missions/deep_space.webp",
+		"name": "Deep Space Voyage",
+		"desc": "A 24 month journey into deep space aboard the Helios-class exploration vessel.",
+		"rating": 4.6
+	},
+	{
+		"img": "images/missions/spacewalk.jpg",
+		"name": "Astronaut Training & Spacewalk",
+		"desc": "Train like a real astronaut and perform an actual spacewalk with supervision.",
+		"rating": 4.4
+	},
+	{
+		"img": "images/missions/titan.jpg",
+		"name": "Mission Titan",
+		"desc": "Land on Saturn's moon Titan and explore its methane lakes in an exo-submarine.",
+		"rating": 4.9
+	},
+	{
+		"img": "images/missions/zero-g.png",
+		"name": "Zero Gravity Adventure",
+		"desc": "Short-haul orbital flight with extended zero-G time for thrill seekers.",
+		"rating": 4.2
+	},
+	{
+		"img": "images/missions/eclipse.jpg",
+		"name": "Solar Eclipse Cruise",
+		"desc": "View a total solar eclipse from space, with a glass dome observation deck.",
+		"rating": 4.6
+	}
+]
