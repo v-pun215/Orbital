@@ -1,74 +1,242 @@
 [
 	{
 		"img": "images/missions/mars.jpg",
-		"name": "Mars",
-		"desc": "A 6 month journey to the red rock.",
-		"rating": 4.7
+		"name": "Journey to Mars",
+		"desc": "Set foot on the red planet and explore its ancient canyons and craters.",
+		"rating": 4.7,
+		"duration": "6 months",
+		"flightDates": "Launching monthly in 2025",
+		"price": "$167000",
+		"inclusions": [
+			"Training & orientation",
+			"Surface exploration",
+			"Space gear rental",
+			"Digital media package"
+		],
+		"equipment": [
+			"Helios-class transport",
+			"AI assistant",
+			"Space-grade suit"
+		]
 	},
 	{
 		"img": "images/missions/iss.jpg",
-		"name": "Orbital Station",
-		"desc": "A 1 month stay on the Earth Station.",
-		"rating": 4.2
+		"name": "Orbital Earth Retreat",
+		"desc": "Enjoy a luxurious stay aboard an orbital station with unmatched views of Earth.",
+		"rating": 4.2,
+		"duration": "1 month",
+		"flightDates": "Every two weeks",
+		"price": "$72000",
+		"inclusions": [
+			"Window-side capsule suite",
+			"Gourmet zero-G meals",
+			"Daily communication to Earth",
+			"Orbital photography session"
+		],
+		"equipment": [
+			"Low Earth Orbit Station",
+			"Emergency escape pod",
+			"Biometric ID access"
+		]
 	},
 	{
 		"img": "images/missions/venus.jpg",
-		"name": "Venus Orbit",
-		"desc": "A 4 month journey to the second planet.",
-		"rating": 4.9
+		"name": "Venus Cloud Skimmer",
+		"desc": "Cruise the upper clouds of Venus aboard a shielded aerial platform.",
+		"rating": 4.9,
+		"duration": "4 months",
+		"flightDates": "Limited slots in Q3 2025",
+		"price": "$195000",
+		"inclusions": [
+			"Atmospheric float capsule",
+			"Live scientific commentary",
+			"Orbital slingshot return",
+			"VR memory log"
+		],
+		"equipment": [
+			"Thermal-resistant balloon",
+			"Drone camera pod",
+			"Radiation shielding wearables"
+		]
 	},
 	{
 		"img": "images/missions/neptune.jpg",
-		"name": "Neptune",
-		"desc": "A 14 month voyage to the blue giant.",
-		"rating": 4.1
+		"name": "Neptune Edge Expedition",
+		"desc": "A voyage to the outermost giant with breathtaking auroras and icy rings.",
+		"rating": 4.1,
+		"duration": "14 months",
+		"flightDates": "Annual departure every September",
+		"price": "$420000",
+		"inclusions": [
+			"Observation capsule",
+			"Deep space training",
+			"Onboard hydroponic meals",
+			"Certificate of exploration"
+		],
+		"equipment": [
+			"Hyperion-class long-haul vessel",
+			"Neural sleep pod",
+			"Augmented guidance system"
+		]
 	},
 	{
 		"img": "images/missions/moon.jpg",
 		"name": "Lunar Odyssey",
 		"desc": "A 5-day round trip to the Moon's surface. Walk in low gravity and witness Earthrise.",
-		"rating": 4.8
+		"rating": 4.8,
+		"duration": "5 days",
+		"flightDates": "Biweekly launches",
+		"price": "$95000",
+		"inclusions": [
+			"Moon landing",
+			"Lunar rover tour",
+			"Commemorative moon dust sample",
+			"Helmet-mounted cam footage"
+		],
+		"equipment": [
+			"FalconX capsule",
+			"Lunar EVA suit",
+			"Portable oxygen module"
+		]
 	},
-    {
-        "img": "images/missions/europa.png",
-        "name": "Europa Dive",
-        "desc": "Descend beneath the icy crust of Jupiter's moon to search for alien oceans.",
-        "rating": 4.8
-    },
+	{
+		"img": "images/missions/europa.png",
+		"name": "Europa Dive",
+		"desc": "Descend beneath the icy crust of Jupiter's moon to search for alien oceans.",
+		"rating": 4.8,
+		"duration": "10 months",
+		"flightDates": "Annually from 2026",
+		"price": "$380000",
+		"inclusions": [
+			"Subsurface aquatic dive",
+			"Under-ice sonar scans",
+			"Alien microbiology briefing",
+			"Live dive recording"
+		],
+		"equipment": [
+			"Cryo-protected submersible",
+			"Thermal gear",
+			"Science-grade sensor pack"
+		]
+	},
 	{
 		"img": "images/missions/rings.jpg",
 		"name": "Saturn Rings Tour",
 		"desc": "A luxury cruiser flyby of Saturn and its rings. Includes zero-G sky lounge.",
-		"rating": 4.9
+		"rating": 4.9,
+		"duration": "7 months",
+		"flightDates": "Once per year in July",
+		"price": "$310000",
+		"inclusions": [
+			"Window cabin with rings view",
+			"Zero-G cocktail bar access",
+			"Professional space photography",
+			"Live astronomy lecture"
+		],
+		"equipment": [
+			"Saturn-class leisure vessel",
+			"Observation drone fleet",
+			"Inertial dampener seat"
+		]
 	},
 	{
 		"img": "images/missions/deep_space.webp",
 		"name": "Deep Space Voyage",
-		"desc": "A 24 month journey into deep space aboard the Helios-class exploration vessel.",
-		"rating": 4.6
+		"desc": "A 24-month journey into deep space aboard the Helios-class exploration vessel.",
+		"rating": 4.6,
+		"duration": "24 months",
+		"flightDates": "Once every two years",
+		"price": "$480000",
+		"inclusions": [
+			"Starfield navigation",
+			"Quantum message capsule",
+			"Daily onboard briefings",
+			"Interstellar passport"
+		],
+		"equipment": [
+			"Helios-class vessel",
+			"Grav-sim chamber",
+			"Sleep-cycle monitor"
+		]
 	},
 	{
 		"img": "images/missions/spacewalk.jpg",
 		"name": "Astronaut Training & Spacewalk",
 		"desc": "Train like a real astronaut and perform an actual spacewalk with supervision.",
-		"rating": 4.4
+		"rating": 4.4,
+		"duration": "2 weeks",
+		"flightDates": "Monthly batches",
+		"price": "$88000",
+		"inclusions": [
+			"Zero-G drills",
+			"EVA protocol lessons",
+			"Real ISS spacewalk",
+			"Training certificate"
+		],
+		"equipment": [
+			"Training rig",
+			"ISS-grade spacesuit",
+			"Mission sim app"
+		]
 	},
 	{
 		"img": "images/missions/titan.jpg",
 		"name": "Mission Titan",
 		"desc": "Land on Saturn's moon Titan and explore its methane lakes in an exo-submarine.",
-		"rating": 4.9
+		"rating": 4.9,
+		"duration": "16 months",
+		"flightDates": "First mission Q1 2026",
+		"price": "$455000",
+		"inclusions": [
+			"Sub-surface submersion",
+			"Polar terrain walk",
+			"Life support assistance",
+			"Titan soil sample"
+		],
+		"equipment": [
+			"Titan-sub Explorer",
+			"Thermal EVA suit",
+			"Atmospheric sensors"
+		]
 	},
 	{
 		"img": "images/missions/zero-g.png",
 		"name": "Zero Gravity Adventure",
 		"desc": "Short-haul orbital flight with extended zero-G time for thrill seekers.",
-		"rating": 4.2
+		"rating": 4.2,
+		"duration": "3 hours",
+		"flightDates": "Daily departures",
+		"price": "$12000",
+		"inclusions": [
+			"Parabolic flight",
+			"Instructor briefing",
+			"Post-flight certificate",
+			"In-flight camera footage"
+		],
+		"equipment": [
+			"Zero-G capsule",
+			"Instructor comms",
+			"Flight suit"
+		]
 	},
 	{
 		"img": "images/missions/eclipse.jpg",
 		"name": "Solar Eclipse Cruise",
 		"desc": "View a total solar eclipse from space, with a glass dome observation deck.",
-		"rating": 4.6
+		"rating": 4.6,
+		"duration": "1 day",
+		"flightDates": "During eclipse events only",
+		"price": "$34000",
+		"inclusions": [
+			"Glass-dome viewing pod",
+			"Eclipse photography kit",
+			"Solar expert commentary",
+			"Certificate of attendance"
+		],
+		"equipment": [
+			"Eclipse orbiter",
+			"Filtered visors",
+			"Real-time tracking HUD"
+		]
 	}
 ]
