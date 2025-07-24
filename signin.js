@@ -5,47 +5,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let stage = 1;
 
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     if (stage === 1) {
+      // Reveal password input field
+      passwordInput.removeAttribute("disabled");
       passwordInput.style.display = "block";
+      passwordInput.focus();
+
       continueBtn.value = "Sign in";
       stage = 2;
       return;
     }
 
-    const email = form.email.value;
+    const email = form.email.value.trim();
     const password = form.password.value;
 
-    try {
-      const res = await fetch("https://spotlight-97bl.onrender.com/signin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ email, password })
-      });
+    // Basic email format check
+    const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!validEmail || password.length < 4) {
+      alert("Please enter a valid email and password (min 4 characters).");
+      return;
+    }
 
-      const data = await res.json();
+    // Create a dummy user object
+    const user = {
+      email: email,
+      password: password, // Only for demo; don't store plaintext passwords in production
+      name: "",            // Will be set via profile popup
+      username: ""
+    };
 
-      if (res.ok) {
-        localStorage.setItem("token", data.token);
-        localStorage.setItem("user", JSON.stringify(data.user));
+    // Simulate token and store everything in localStorage
+    const fakeToken = `dummy-token-${Date.now()}`;
+    localStorage.setItem("token", fakeToken);
+    localStorage.setItem("user", JSON.stringify(user));
 
-        const user = JSON.parse(localStorage.getItem("user"));
-        if (!user.name || !user.username) {
-          window.location.href = "index.html?showProfile=1";
-        } else {
-          window.location.href = "index.html";
-        }
-      } else {
-        alert(data.error || "Login failed");
-      }
-
-    } catch (err) {
-      console.error("Error during sign in:", err);
-      alert("Could not connect to server.");
+    // Check for profile completion
+    if (!user.name || !user.username) {
+      window.location.href = "index.html?showProfile=1";
+    } else {
+      window.location.href = "index.html";
     }
   });
 });

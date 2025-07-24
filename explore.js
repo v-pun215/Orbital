@@ -97,6 +97,47 @@ function showPopup(mission) {
 		li.textContent = item;
 		equipList.appendChild(li);
 	});
+
+	document.getElementById("book-mission-btn").onclick = () => {
+		const token = localStorage.getItem("token");
+		const user = JSON.parse(localStorage.getItem("user"));
+
+		if (!token || !user) {
+			window.location.href = "signin.html";
+			return;
+		}
+		
+
+		// Save selected mission temporarily to localStorage
+		localStorage.setItem("pendingMission", JSON.stringify(mission));
+
+		// Redirect to profile.html with popup flag
+		window.location.href = "profile.html?bookMission=1";
+	};
+	document.getElementById("add-to-wishlist-btn").onclick = () => {
+    const token = localStorage.getItem("token");
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!token || !user) {
+        window.location.href = "signin.html";
+        return;
+    }
+
+    const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+
+    // Prevent duplicates
+    const exists = wishlist.some(item => item.name === mission.name);
+    if (exists) {
+        alert("This mission is already in your wishlist.");
+        return;
+    }
+
+    wishlist.push(mission);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+	window.location.href = "explore.html"
+};
+
+
 }
 
 // Popup close behavior

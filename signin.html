@@ -1,42 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotlight</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orbital - Sign In</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 5px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .auth-form {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .auth-form.active {
+      display: flex;
+    }
+
+    .auth-form input[type="submit"] {
+      margin-top: 10px;
+    }
+  </style>
 </head>
-<style>
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 5px;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-</style>
 <body>
-    <div class="sudo-nav">
-        <a href="index.html"><p>← Back</p></a>
-    </div>
-    <div class="signin-container">
-        <div class="left-side">
-            <div class="center1">
-                <h1>Sign in to Spotlight</h1>
-                <form id="signin-form">
-                    <input type="text" name="email" placeholder="Enter your email..." class="email-input" required>
+  <div class="sudo-nav">
+    <a href="index.html"><p>← Back</p></a>
+  </div>
 
-                    <input type="password" name="password" placeholder="Enter your password..." class="password-input" style="display: none;" />
-
-                    <div class="child-div">
-                        <a href="signup.html">Sign up</a>
-                        <input type="submit" value="Continue" class="button" id="continue-btn">
-                    </div>
-                </form>
-                <script src="signin.js" defer></script>
-            </div>
-        </div>
-        <div class="right-side"></div>
+  <div class="signin-container">
+    <div class="left-side">
+      <div class="center1">
+        <h1 id="form-heading">Welcome Back</h1>
+        <form id="signin-form" class="auth-form active">
+          <input type="email" name="email" placeholder="Enter your email..." class="email-input" required>
+          <input type="password" name="password" class="password-input" placeholder="Enter your password..." required disabled style="display: none;">
+          <div class="child-div">
+            <a href="#" id="to-signup">Sign up</a>
+            <input type="submit" value="Continue" id="continue-btn" class="button">
+          </div>
+        </form>
+        <form id="signup-form" class="auth-form">
+          <input type="email" name="email" placeholder="Enter your email..." class="email-input" required>
+          <input type="password" name="password" placeholder="Create a password..." class="email-input" required>
+          <div class="child-div">
+            <a href="#" id="to-signin">Already have an account?</a>
+            <input type="submit" value="Sign Up" class="button">
+          </div>
+        </form>
+      </div>
     </div>
+
+    <div class="right-side">
+    </div>
+  </div>
+
+  <script src="signin.js"></script>
+  <script src="signup.js"></script>
+  <script>
+    const signinForm = document.getElementById("signin-form");
+    const signupForm = document.getElementById("signup-form");
+    const heading = document.getElementById("form-heading");
+
+    document.getElementById("to-signup").addEventListener("click", (e) => {
+      e.preventDefault();
+      signinForm.classList.remove("active");
+      signupForm.classList.add("active");
+      heading.textContent = "Create your Spotlight Account";
+    });
+
+    document.getElementById("to-signin").addEventListener("click", (e) => {
+      e.preventDefault();
+      signupForm.classList.remove("active");
+      signinForm.classList.add("active");
+      heading.textContent = "Welcome Back";
+    });
+  </script>
 </body>
 </html>

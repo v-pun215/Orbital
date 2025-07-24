@@ -6,3 +6,15 @@ window.addEventListener("scroll", () => {
         navbar.classList.remove("translucent");
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+const token = localStorage.getItem("token");
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (token && user) {
+    console.log("User:", user);
+    console.log("Token:", token);
+} else {
+    console.log("User not logged in.");
+}
+});
