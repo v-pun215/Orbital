@@ -42,45 +42,68 @@ document.addEventListener("DOMContentLoaded", async () => {
 		data.forEach(createCard);
 	}
 
-	await loadMissions();
+	loadMissions();
 });
 
+// Show popup with dynamic mission details
 function showPopup(mission) {
 	const overlay = document.getElementById("popup-overlay");
-	overlay.querySelector("#popup-title").textContent = mission.name;
-	overlay.querySelector("#popup-desc").textContent = mission.desc;
-	overlay.querySelector("#popup-rating").textContent = `★ ${mission.rating}`;
-	overlay.querySelector("#popup-duration").textContent = mission.duration;
-	overlay.querySelector("#popup-dates").textContent = mission.flightDates;
-	overlay.querySelector("#popup-price").textContent = mission.price;
-
-	// Inclusions list
-	const incList = overlay.querySelector("#popup-inclusions ul");
-	incList.innerHTML = "";
-	mission.inclusions.forEach(item => {
-		const li = document.createElement("li");
-		li.textContent = item;
-		incList.appendChild(li);
-	});
-
-	// Equipment list
-	const eqList = overlay.querySelector("#popup-equipment ul");
-	eqList.innerHTML = "";
-	mission.equipment.forEach(item => {
-		const li = document.createElement("li");
-		li.textContent = item;
-		eqList.appendChild(li);
-	});
-
 	overlay.classList.remove("hidden");
+
+	document.getElementById("popup-title").textContent = mission.name;
+	document.getElementById("popup-desc").textContent = mission.desc;
+	document.getElementById("popup-rating").textContent = `★ ${mission.rating}`;
+	document.getElementById("popup-duration").textContent = mission.duration;
+	document.getElementById("popup-dates").textContent = mission.flightDates;
+	document.getElementById("popup-price").textContent = mission.price;
+	document.getElementById("popup-best-for").textContent = mission["best-for"] || "Everyone";
+	document.querySelector(".availability").innerHTML = `<i class="fa-solid fa-clock"></i> Only <strong>${mission.availability}</strong> seats left!`;
+
+	// Promo banner
+	document.querySelector(".promo-banner").innerHTML = mission["promo-banner"] || "";
+
+	// Launch Date Options
+	const launchSelect = document.getElementById("launch-date");
+	launchSelect.innerHTML = "";
+	(mission["launch-date-options"] || []).forEach(date => {
+		const option = document.createElement("option");
+		option.textContent = date;
+		launchSelect.appendChild(option);
+	});
+
+	// Tags
+	const tagsContainer = document.querySelector(".tags");
+	tagsContainer.innerHTML = "";
+	(mission.tags || []).forEach(tag => {
+		const span = document.createElement("span");
+		span.innerHTML = `<i class="${tag.includes('Kids') ? 'fa-solid fa-children' : 'fa-solid fa-user-astronaut'}"></i> ${tag}`;
+		tagsContainer.appendChild(span);
+	});
+
+	// Inclusions
+	const inclList = document.querySelector("#popup-inclusions ul");
+	inclList.innerHTML = "";
+	(mission.inclusions || []).forEach(item => {
+		const li = document.createElement("li");
+		li.textContent = item;
+		inclList.appendChild(li);
+	});
+
+	// Equipment
+	const equipList = document.querySelector("#popup-equipment ul");
+	equipList.innerHTML = "";
+	(mission.equipment || []).forEach(item => {
+		const li = document.createElement("li");
+		li.textContent = item;
+		equipList.appendChild(li);
+	});
 }
 
-// Close popup on ✕ click
+// Popup close behavior
 document.querySelector(".close-popup").addEventListener("click", () => {
 	document.getElementById("popup-overlay").classList.add("hidden");
 });
 
-// Close popup when clicking outside the popup-card
 document.getElementById("popup-overlay").addEventListener("click", (e) => {
 	if (e.target.id === "popup-overlay") {
 		e.target.classList.add("hidden");

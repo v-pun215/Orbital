@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orbital - Explore</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e4807bb23d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="nav translucent">
@@ -34,27 +35,63 @@
             </div>
         </div>
     </div>
- <div id="popup-overlay" class="popup-overlay hidden">
+<div id="popup-overlay" class="popup-overlay hidden">
 	<div class="popup-card">
 		<span class="close-popup">&times;</span>
-		<h2 id="popup-title">Mission Title</h2>
-		<p id="popup-desc">Mission description goes here.</p>
-		<p id="popup-rating">★ Rating</p>
-		<p><strong>Duration:</strong> <span id="popup-duration">--</span></p>
-		<p><strong>Flight Dates:</strong> <span id="popup-dates">--</span></p>
-		<p><strong>Price:</strong> <span id="popup-price">--</span></p>
 
-		<div id="popup-inclusions">
-			<strong>Inclusions:</strong>
-			<ul></ul>
+		<!-- Left: Info section -->
+		<div class="popup-left">
+			<h2 id="popup-title">Mission Title</h2>
+			<p id="popup-desc">Mission description goes here.</p>
+			<p id="popup-rating">★ Rating</p>
+			<p><strong>Duration:</strong> <span id="popup-duration">--</span></p>
+			<p><strong>Flight Dates:</strong> <span id="popup-dates">--</span></p>
+
+			<div id="popup-inclusions">
+				<strong>Inclusions:</strong>
+				<ul></ul>
+			</div>
+
+			<div id="popup-equipment">
+				<strong>Equipment:</strong>
+				<ul></ul>
+			</div>
 		</div>
 
-		<div id="popup-equipment">
-			<strong>Equipment:</strong>
-			<ul></ul>
-		</div>
+		<!-- Right: Price + Booking panel -->
+		<div class="popup-right">
+            <div class="popup-meta">
+                <p class="popup-price-tag"><strong>Price:</strong> <span id="popup-price">$0</span></p>
+                <p class="best-for"><i class="fa-solid fa-users"></i> <span id="popup-best-for">Everyone</span></p>
+            </div>
+
+            <p class="availability"><i class="fa-solid fa-clock"></i> Only <strong>5 seats</strong> left!</p>
+
+            <label for="launch-date">Launch Date</label>
+            <select id="launch-date" class="date-select">
+                <option>July 2025</option>
+                <option>August 2025</option>
+                <option>September 2025</option>
+            </select>
+
+            <div class="promo-banner">
+                🚀 Book within <strong>2 days</strong> to get a free VR log!
+            </div>
+
+            <div class="tags">
+                <span><i class="fa-solid fa-user-astronaut"></i> Adults</span>
+                <span><i class="fa-solid fa-children"></i> Kids 10+</span>
+            </div>
+
+            <a href="#" class="button1">Book Now</a>
+            <a href="#" class="button1 secondary">Add to Wishlist</a>
+
+            <p class="note"><i class="fa-solid fa-shield-alt"></i> Fully refundable. Certified safe by ISA.</p>
+        </div>
+
 	</div>
 </div>
+
     <footer  style="margin-top:7vh;">
         <div class="footer-container">
             <div class="footer-left">

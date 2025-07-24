@@ -17,6 +17,18 @@
 			"Helios-class transport",
 			"AI assistant",
 			"Space-grade suit"
+		],
+		"best-for": "5-6 people",
+		"availability": 5,
+		"launch-date-options": [
+			"July 2025",
+			"August 2025",
+			"September 2025"
+		],
+		"promo-banner": "🚀 Book within <strong>2 days</strong> to get a free VR log!",
+		"tags": [
+			"Adults",
+			"Kids 10+"
 		]
 	},
 	{
@@ -37,6 +49,18 @@
 			"Low Earth Orbit Station",
 			"Emergency escape pod",
 			"Biometric ID access"
+		],
+		"best-for": "2-3 people",
+		"availability": 7,
+		"launch-date-options": [
+			"July 2025",
+			"July 15, 2025",
+			"August 1, 2025"
+		],
+		"promo-banner": "🌍 Book now to receive a free orbital photo album!",
+		"tags": [
+			"Adults",
+			"Kids 12+"
 		]
 	},
 	{
@@ -57,6 +81,18 @@
 			"Thermal-resistant balloon",
 			"Drone camera pod",
 			"Radiation shielding wearables"
+		],
+		"best-for": "2 people",
+		"availability": 3,
+		"launch-date-options": [
+			"August 2025",
+			"September 2025",
+			"April 2026"
+		],
+		"promo-banner": "☁️ Book by this week to receive a free high-res Venus cloud scan!",
+		"tags": [
+			"Adults",
+			"Scientists"
 		]
 	},
 	{
@@ -77,6 +113,18 @@
 			"Hyperion-class long-haul vessel",
 			"Neural sleep pod",
 			"Augmented guidance system"
+		],
+		"best-for": "3-4 people",
+		"availability": 2,
+		"launch-date-options": [
+			"September 2025",
+			"September 2026",
+			"October 2026"
+		],
+		"promo-banner": "🪐 Enroll now and receive a free stargazer pack worth $2,000!",
+		"tags": [
+			"Space Enthusiasts",
+			"Astronomers"
 		]
 	},
 	{
@@ -97,6 +145,18 @@
 			"FalconX capsule",
 			"Lunar EVA suit",
 			"Portable oxygen module"
+		],
+		"best-for": "2-3 people",
+		"availability": 7,
+		"launch-date-options": [
+			"October 2025",
+			"November 2025",
+			"December 2025"
+		],
+		"promo-banner": "🌕 Book by end of this week and get a free moon dust souvenir!",
+		"tags": [
+			"Families",
+			"Kids 12+"
 		]
 	},
 	{
@@ -117,6 +177,18 @@
 			"Cryo-protected submersible",
 			"Thermal gear",
 			"Science-grade sensor pack"
+		],
+		"best-for": "3-4 people",
+		"availability": 3,
+		"launch-date-options": [
+			"April",
+			"May",
+			"June"
+		],
+		"promo-banner": "❄️ Book early and receive a free mission patch signed by the pilot!",
+		"tags": [
+			"Explorers",
+			"Scientists"
 		]
 	},
 	{
@@ -137,6 +209,18 @@
 			"Saturn-class leisure vessel",
 			"Observation drone fleet",
 			"Inertial dampener seat"
+		],
+		"best-for": "Couples or small groups",
+		"availability": 6,
+		"launch-date-options": [
+			"July",
+			"August",
+			"October"
+		],
+		"promo-banner": "🪐 Reserve now and get complimentary night-sky photography lessons!",
+		"tags": [
+			"Honeymooners",
+			"Space tourists"
 		]
 	},
 	{
@@ -157,6 +241,19 @@
 			"Helios-class vessel",
 			"Grav-sim chamber",
 			"Sleep-cycle monitor"
+		],
+		"best-for": "Exploration teams (4-8 people)",
+		"availability": 3,
+		"launch-date-options": [
+			"May",
+			"September",
+			"December"
+		],
+		"promo-banner": "🌌 Book by end of this month to receive exclusive cosmic time-lapse footage!",
+		"tags": [
+			"Researchers",
+			"Adventure seekers",
+			"Long-term travelers"
 		]
 	},
 	{
@@ -177,6 +274,19 @@
 			"Training rig",
 			"ISS-grade spacesuit",
 			"Mission sim app"
+		],
+		"best-for": "Individuals or pairs",
+		"availability": 12,
+		"launch-date-options": [
+			"April",
+			"June",
+			"October"
+		],
+		"promo-banner": "🛰️ Enroll this week and get an exclusive mission patch!",
+		"tags": [
+			"Adults",
+			"STEM Students",
+			"Fitness Required"
 		]
 	},
 	{
@@ -197,6 +307,19 @@
 			"Titan-sub Explorer",
 			"Thermal EVA suit",
 			"Atmospheric sensors"
+		],
+		"best-for": "4-5 people",
+		"availability": 3,
+		"launch-date-options": [
+			"January",
+			"March",
+			"November"
+		],
+		"promo-banner": "🌌 Book early to receive a 3D-printed Titan terrain model!",
+		"tags": [
+			"Adults",
+			"Researchers",
+			"Extreme"
 		]
 	},
 	{
@@ -217,6 +340,19 @@
 			"Zero-G capsule",
 			"Instructor comms",
 			"Flight suit"
+		],
+		"best-for": "1-2 people",
+		"availability": 8,
+		"launch-date-options": [
+			"Daily",
+			"Weekends",
+			"Custom Charter"
+		],
+		"promo-banner": "🎉 Book today and get a free flight suit rental!",
+		"tags": [
+			"Teens 13+",
+			"Adults",
+			"Thrill Seekers"
 		]
 	},
 	{
@@ -237,6 +373,19 @@
 			"Eclipse orbiter",
 			"Filtered visors",
 			"Real-time tracking HUD"
+		],
+		"best-for": "2-3 people",
+		"availability": 6,
+		"launch-date-options": [
+			"April",
+			"October",
+			"December"
+		],
+		"promo-banner": "🌒 Reserve before this Friday and receive a free commemorative eclipse print!",
+		"tags": [
+			"Families",
+			"Photographers",
+			"Astronomy Enthusiasts"
 		]
 	}
 ]
