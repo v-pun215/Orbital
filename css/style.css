@@ -114,7 +114,39 @@ body {
         transform: translateY(0);
     }
 }
+@keyframes fadeInSideBlur {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}@keyframes fadeInSideBlur2 {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
 
+.fadeinleft {
+    animation: fadeInSideBlur 0.4s ease-out forwards;
+    opacity: 0;
+}
+.fadeinright {
+    animation: fadeInSideBlur2 0.4s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+}
 @keyframes popInFromTop {
     from {
         opacity: 0;
