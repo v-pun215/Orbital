@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
 
     if (wishlist.length === 0) {
-        wishlistContainer.innerHTML = "<p style='padding:30px;'>No wishlist items yet.</p>";
+        wishlistContainer.innerHTML = "<p style='color:white;'>No wishlist items yet.</p>";
         return;
     }
 
